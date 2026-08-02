@@ -1,0 +1,314 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "creation": "2026-08-02 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "statement_details_section",
+  "company",
+  "currency",
+  "customer",
+  "supplier",
+  "column_break_1",
+  "trip_date",
+  "posting_date",
+  "due_date",
+  "status",
+  "posting_status",
+  "trip_details_section",
+  "truck",
+  "driver",
+  "column_break_2",
+  "route",
+  "submit_linked_invoices",
+  "revenue_section",
+  "revenue_items",
+  "expense_section",
+  "expense_items",
+  "profitability_section",
+  "total_revenue",
+  "total_expenses",
+  "column_break_3",
+  "gross_profit",
+  "profit_margin",
+  "accounting_defaults_section",
+  "default_revenue_item",
+  "default_expense_item",
+  "column_break_4",
+  "default_income_account",
+  "default_expense_account",
+  "cost_center",
+  "linked_documents_section",
+  "sales_invoice",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "statement_details_section",
+   "fieldtype": "Section Break",
+   "label": "Statement Details"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "trip_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Trip Date",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "On Trip\nCompleted",
+   "default": "On Trip"
+  },
+  {
+   "default": "Not Posted",
+   "fieldname": "posting_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Posting Status",
+   "options": "Not Posted\nPosted",
+   "read_only": 1
+  },
+  {
+   "fieldname": "trip_details_section",
+   "fieldtype": "Section Break",
+   "label": "Trip Details"
+  },
+  {
+   "fieldname": "truck",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Truck",
+   "options": "Vehicle",
+   "reqd": 1
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Data",
+   "label": "Driver"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "description": "When enabled, linked invoices are submitted immediately after they are created.",
+   "fieldname": "submit_linked_invoices",
+   "fieldtype": "Check",
+   "label": "Submit Linked Invoices"
+  },
+  {
+   "fieldname": "revenue_section",
+   "fieldtype": "Section Break",
+   "label": "Revenue"
+  },
+  {
+   "fieldname": "revenue_items",
+   "fieldtype": "Table",
+   "label": "Revenue Items",
+   "options": "Trip Revenue Item"
+  },
+  {
+   "fieldname": "expense_section",
+   "fieldtype": "Section Break",
+   "label": "Expenses"
+  },
+  {
+   "fieldname": "expense_items",
+   "fieldtype": "Table",
+   "label": "Expense Items",
+   "options": "Trip Expense Item"
+  },
+  {
+   "fieldname": "profitability_section",
+   "fieldtype": "Section Break",
+   "label": "Profitability"
+  },
+  {
+   "fieldname": "total_revenue",
+   "fieldtype": "Currency",
+   "label": "Total Revenue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_expenses",
+   "fieldtype": "Currency",
+   "label": "Total Expenses",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gross_profit",
+   "fieldtype": "Currency",
+   "label": "Gross Profit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "profit_margin",
+   "fieldtype": "Percent",
+   "label": "Profit Margin",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "accounting_defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Defaults"
+  },
+  {
+   "fieldname": "default_revenue_item",
+   "fieldtype": "Link",
+   "label": "Default Revenue Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "default_expense_item",
+   "fieldtype": "Link",
+   "label": "Default Expense Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_income_account",
+   "fieldtype": "Link",
+   "label": "Default Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "default_expense_account",
+   "fieldtype": "Link",
+   "label": "Default Expense Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center",
+   "read_only": 1
+  },
+  {
+   "fieldname": "linked_documents_section",
+   "fieldtype": "Section Break",
+   "label": "Linked Documents"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Trip Statement",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-02 18:36:26.337679",
+ "modified_by": "Administrator",
+ "module": "Logistic Operations MS",
+ "name": "Trip Statement",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
