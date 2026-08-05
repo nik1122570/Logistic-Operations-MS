@@ -5,6 +5,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "trip_profit_dashboard",
   "statement_details_section",
   "company",
   "currency",
@@ -44,6 +45,11 @@
   "amended_from"
  ],
  "fields": [
+  {
+   "fieldname": "trip_profit_dashboard",
+   "fieldtype": "HTML",
+   "label": "Trip Profit Dashboard"
+  },
   {
    "fieldname": "statement_details_section",
    "fieldtype": "Section Break",
